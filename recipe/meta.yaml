@@ -1,5 +1,5 @@
 {% set name = "pynumero_libraries" %}
-{% set version = "0.3" %}
+{% set version = "0.4" %}
 {% set variant = "openblas" %}
 
 package:
@@ -9,7 +9,7 @@ package:
 source:
   fn: {{ version }}.tar.gz
   url: https://github.com/santiagoropb/pynumero_libraries/archive/v{{ version }}.tar.gz
-  sha256: f2acfac43279e4ea4416a5bd55433f07178efd9808baa477cb8ade4c337a744d
+  sha256: 5084868bd7d34e5ad393d85a09dfa62c010bf21e3beb892ee54ffce79c1c7e6d
   
 build:
   number: 1000
