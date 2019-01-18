@@ -30,7 +30,6 @@ requirements:
     - ampl-mp
     - {{ pin_compatible('numpy') }}
     - scipy
-    - matplotlib
 
 test:
   files:
