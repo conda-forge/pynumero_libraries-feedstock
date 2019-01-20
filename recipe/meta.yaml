@@ -29,7 +29,9 @@ requirements:
     - python
     - ampl-mp
     - {{ pin_compatible('numpy') }}
-
+    - scipy
+    - matplotlib
+    - pymumps
 test:
   files:
     - test
