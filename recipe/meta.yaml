@@ -25,6 +25,9 @@ requirements:
     - ampl-mp
     - python
     - numpy
+    - pymumps
+    - matplotlib
+    - scipy
   run:
     - python
     - ampl-mp
