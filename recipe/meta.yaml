@@ -12,7 +12,7 @@ source:
   sha256: 5084868bd7d34e5ad393d85a09dfa62c010bf21e3beb892ee54ffce79c1c7e6d
     
 build:
-  number: 1000
+  number: 1001
   skip: true  # [win]
       
 requirements:
@@ -26,14 +26,14 @@ requirements:
     - python
     - numpy
     - pymumps
-    - matplotlib
+    - matplotlib-base
     - scipy
   run:
     - python
     - ampl-mp
     - {{ pin_compatible('numpy') }}
     - scipy
-    - matplotlib
+    - matplotlib-base
     - pymumps
 
 test:
