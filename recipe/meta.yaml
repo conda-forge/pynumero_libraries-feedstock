@@ -25,14 +25,14 @@ requirements:
     - python
     - numpy
     - pymumps  # [not win]
-    - matplotlib
-    - scipy
+    - matplotlib  # [not win]
+    - scipy  # [not win]
   run:
     - python
     - ampl-mp  # [not win] 
     - {{ pin_compatible('numpy') }}
-    - scipy
-    - matplotlib
+    - scipy  # [not win]
+    - matplotlib  # [not win]
     - pymumps  # [not win]
 
 test:
