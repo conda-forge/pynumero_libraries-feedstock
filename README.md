@@ -14,18 +14,7 @@ Summary: Libraries for PyNumero, a python package for numerical optimization
 Current build status
 ====================
 
-
 <table>
-  <tr>
-    <td>Linux</td>
-    <td>
-      <img src="https://img.shields.io/badge/linux-disabled-lightgrey.svg" alt="linux disabled">
-    </td>
-  </tr>
-  <tr>
-    <td>OSX</td>
-    <td>
-      <img src="https://img.shields.io/badge/OSX-disabled-lightgrey.svg" alt="OSX disabled">
     </td>
   </tr>
   <tr>

@@ -12,8 +12,8 @@ source:
   sha256: cf21b5045aa18c636b4e2e13fe4f42119b0a4b0ccef96e43d4e5876f675d78a7
     
 build:
-  number: 1000
-  skip: true 
+  number: 0
+  skip: true  # [win]
       
 requirements:
   build:
@@ -25,6 +25,9 @@ requirements:
     - ampl-mp
     - python
     - numpy
+    - pymumps
+    - matplotlib
+    - scipy
   run:
     - python
     - ampl-mp
