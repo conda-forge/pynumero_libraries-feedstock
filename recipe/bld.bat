@@ -10,7 +10,7 @@ cmake -G "NMake Makefiles" ^
       ..
 if errorlevel 1 exit 1
 
-nmake
+nmake VERBOSE=1
 if errorlevel 1 exit 1
 
 nmake install
