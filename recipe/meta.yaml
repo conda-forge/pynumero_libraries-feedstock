@@ -21,19 +21,19 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
-    - ampl-mp #[not win]
+    - ampl-mp  # [not win]
     - python
     - numpy
-    - pymumps #[not win]
+    - pymumps  # [not win]
     - matplotlib
     - scipy
   run:
     - python
-    - ampl-mp #[not win] 
+    - ampl-mp  # [not win] 
     - {{ pin_compatible('numpy') }}
     - scipy
     - matplotlib
-    - pymumps #[not win]
+    - pymumps  # [not win]
 
 test:
   files:
