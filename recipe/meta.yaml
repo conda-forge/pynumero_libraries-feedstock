@@ -1,5 +1,5 @@
 {% set name = "pynumero_libraries" %}
-{% set version = "0.5" %}
+{% set version = "1.2" %}
 {% set variant = "openblas" %}
 
 package:
@@ -9,12 +9,12 @@ package:
 source:
   fn: {{ version }}.tar.gz
   url: https://github.com/santiagoropb/pynumero_libraries/archive/v{{ version }}.tar.gz
-  sha256: cf21b5045aa18c636b4e2e13fe4f42119b0a4b0ccef96e43d4e5876f675d78a7
+  sha256: a30875a4ffd3a40469fdc537c97a1d96174fe55cbd4519081b36f89c05e8e8e6
     
 build:
   number: 0
-  skip: true  # [win]
-      
+  skip: true  # [win and vc<14]
+  
 requirements:
   build:
     - cmake
@@ -22,24 +22,24 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
-    - ampl-mp
-    - python
-    - numpy
-    - pymumps
-    - matplotlib
-    - scipy
+    - ampl-mp  # [not win]
+    - python  
+    - numpy  
+    - pymumps  # [not win]
+    - matplotlib  # [not win]
+    - scipy  # [not win]
   run:
-    - python
-    - ampl-mp
-    - {{ pin_compatible('numpy') }}
-    - scipy
-    - matplotlib
-    - pymumps
+    - python  
+    - ampl-mp  # [not win] 
+    - {{ pin_compatible('numpy') }} 
+    - scipy  # [not win]
+    - matplotlib  # [not win]
+    - pymumps  # [not win]
 
 test:
   files:
-    - test
-    - simple_nlp.nl
+    - test  # [not win]  
+    - simple_nlp.nl  # [not win]  
     
 about:
   home: https://github.com/santiagoropb/pynumero_libraries.git
@@ -50,3 +50,5 @@ about:
 extra:
   recipe-maintainers:
     - santiagoropb
+    - carldlaird
+    - michaelbynum
