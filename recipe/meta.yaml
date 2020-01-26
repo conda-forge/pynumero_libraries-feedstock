@@ -1,5 +1,5 @@
 {% set name = "pynumero_libraries" %}
-{% set version = "0.8" %}
+{% set version = "0.9" %}
 {% set variant = "openblas" %}
 
 package:
@@ -9,7 +9,7 @@ package:
 source:
   fn: {{ version }}.tar.gz
   url: https://github.com/santiagoropb/pynumero_libraries/archive/v{{ version }}.tar.gz
-  sha256: d08985d7832e30db6d45998399178cd3d4b96db6931ec400107066a354a7f066
+  sha256: 37c4a3c8160f1f10315f4794d077cee5c855734ebbffa49dafca4173ec8d9f19
     
 build:
   number: 0
@@ -23,23 +23,23 @@ requirements:
     - {{ compiler('cxx') }}
   host:
     - ampl-mp  # [not win]
-    - python  # [not win]
-    - numpy  # [not win]
+    - python  
+    - numpy  
     - pymumps  # [not win]
     - matplotlib  # [not win]
     - scipy  # [not win]
   run:
-    - python  # [not win]
+    - python  
     - ampl-mp  # [not win] 
-    - {{ pin_compatible('numpy') }}  # [not win]
+    - {{ pin_compatible('numpy') }} 
     - scipy  # [not win]
     - matplotlib  # [not win]
     - pymumps  # [not win]
 
 test:
   files:
-    - test  # [not win]
-    - simple_nlp.nl  # [not win]
+    - test  
+    - simple_nlp.nl  
     
 about:
   home: https://github.com/santiagoropb/pynumero_libraries.git
