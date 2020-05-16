@@ -12,7 +12,7 @@ source:
   sha256: 5dce418d38de7a44ca1263275912299abfb2350b212b0f612270703396d4f7eb
     
 build:
-  number: 0
+  number: 1
   skip: true  # [win and vc<14]
   
 requirements:
@@ -26,14 +26,14 @@ requirements:
     - python  
     - numpy  
     - pymumps  # [not win]
-    - matplotlib  # [not win]
+    - matplotlib-base  # [not win]
     - scipy  # [not win]
   run:
     - python  
     - ampl-mp  # [not win] 
     - {{ pin_compatible('numpy') }} 
     - scipy  # [not win]
-    - matplotlib  # [not win]
+    - matplotlib-base  # [not win]
     - pymumps  # [not win]
 
 test:
